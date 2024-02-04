@@ -22,6 +22,7 @@ Run `brew install cmake` from Terminal
 Run the following commands to install Meta XR Simulator
 
 ```bash
+brew update
 brew tap Oculus-VR/tap
 brew install meta-xr-simulator
 ```
