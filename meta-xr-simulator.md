@@ -37,7 +37,7 @@ It's recommended to set Meta XR Simulator as the active OpenXR Runtime for the s
 
 ```bash
 sudo mkdir -p /usr/local/share/openxr/1
-ln -s /opt/homebrew/Cellar/meta-xr-simulator/64.0.0-alpha.1/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
+sudo ln -s /opt/homebrew/Cellar/meta-xr-simulator/64.0.0-alpha.1/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
 ```
 
 However, it's not necessary. You can also set `XR_RUNTIME_JSON` environment variable before running your OpenXR app. It can be used in absence of, or override the OpenXR runtime set through `active_runtime.json`:
