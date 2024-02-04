@@ -30,21 +30,21 @@ brew install meta-xr-simulator
 Disable quarantine of `SIMULATOR.so`, so it can be loaded by another OpenXR app:
 
 ```bash
-sudo xattr -d com.apple.quarantine /opt/homebrew/Cellar/meta-xr-simulator/<VERSION>/SIMULATOR.so
+sudo xattr -d com.apple.quarantine /opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/SIMULATOR.so
 ```
 
 It's recommended to set Meta XR Simulator as the active OpenXR Runtime for the system:
 
 ```bash
 sudo mkdir -p /usr/local/share/openxr/1
-sudo ln -s /opt/homebrew/Cellar/meta-xr-simulator/<VERSION>/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
+sudo ln -s /opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
 ```
 
 However, it's not necessary. You can also set `XR_RUNTIME_JSON` environment variable before running your OpenXR app. It can be used in absence of, or override the OpenXR runtime set through `active_runtime.json`:
 
 ```bash
 # Add this line to ~/.zshrc or run it before launch an OpenXR app
-export XR_RUNTIME_JSON=/opt/homebrew/Cellar/meta-xr-simulator/<VERSION>/meta_openxr_simulator.json
+export XR_RUNTIME_JSON=/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json
 ```
 
 ### Download OpenXR-SDK-Source
@@ -77,7 +77,7 @@ Following the steps to build and launch **hello_xr** from Xcode:
 * In the Targets dropdown, choose **hello_xr**
 Open the Targets dropdown again, click "Edit Scheme …"
 * Set **-g vulkan2** in “Arguments Passed on Launch”
-* If the active OpenXR runtime hasn’t been set, set `XR_RUNTIME_JSON` to `/opt/homebrew/Cellar/meta-xr-simulator/<VERSION>/meta_openxr_simulator.json` in “Environment Variables”
+* If the active OpenXR runtime hasn’t been set, set `XR_RUNTIME_JSON` to `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json` in “Environment Variables”
 * Click **Play** button
 > Note: Although both `XR_KHR_vulkan_enable` and `XR_KHR_vulkan_enable2` are supported by Meta XR Simualtor, The former is not compatible with MoltenVk. Thus, you may get `ERROR_INCOMPATIBLE_DRIVER` if setting the graphics plugin to "vulkan", instead of "vulkan2".
 
