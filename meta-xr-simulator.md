@@ -91,4 +91,7 @@ Open the Targets dropdown again, click "Edit Scheme …"
 Please check the Meta XR Simulator [documentation](https://developer.oculus.com/documentation/native/xrsim-intro/) to obtain further information.
 
 ## Known issues
+
 **Synthetic Environment Server**, which simulates a physical environment for Mixed Reality app development, is not current supported on macOS and will be enabled through a future release.
+
+**Intel-based Mac** is not currently supported.
