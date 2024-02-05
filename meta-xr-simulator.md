@@ -6,7 +6,7 @@
 Following the [official instruction](https://vulkan.lunarg.com/doc/sdk/latest/mac/getting_started.html) to install Vulkan SDK:
 * Download the Vulkan SDK from the Download Site
 Open the downloaded *vulkansdk-macos-v.w.xx.0.dmg*, double click “InstallVulkan” to launch the installer
-* During installation, enable **System Global Installation** option, which updates Vulkan Loader and MoltenVK libraries in /usr/local
+* During installation, enable **System Global Installation** option, which updates Vulkan Loader and MoltenVK libraries in `/usr/local`
 
 ### Homebrew
 Install Homebrew following the instruction on https://brew.sh/ 
@@ -15,7 +15,7 @@ Install Homebrew following the instruction on https://brew.sh/
 Run `brew install cmake` from Terminal
 
 ### (Optional) adb
-To use **Data Forwarding** (which enables you to use the physical Quest Touch Controller with XR Simulator), you need to have `adb` in your `PATH`. `adb` is a part of Android SDK Platform Tools and can be installed with **Android Studio** from its [official website](https://developer.android.com/studio).
+To use **Data Forwarding** (which enables you to use the physical Quest Touch Controller with XR Simulator), you need to have `adb` in your `PATH` environment variable. `adb` is a part of Android SDK Platform Tools and can be installed with **Android Studio** from its [official website](https://developer.android.com/studio).
 
 ### (Optional) Meta Quest Developer Hub
 While not essential, it's recommended to use the **Meta Quest Developer Hub** in conjunction with XR Simulator to manage your Quest headset when using **Data Forwarding**. It allows you to disable the Proximity Sensor and launch the Data Forwarding Server with just a few clicks. You can install it from the [official website](https://developer.oculus.com/meta-quest-developer-hub/).
@@ -88,7 +88,7 @@ Open the Targets dropdown again, click "Edit Scheme …"
 
 ## More information
 
-Please check the Meta XR Simulator [introduction](https://developer.oculus.com/documentation/native/xrsim-intro/) to obtain further information.
+Please check the Meta XR Simulator [documentation](https://developer.oculus.com/documentation/native/xrsim-intro/) to obtain further information.
 
 ## Known issues
-* Synthetic Environment Server is not supported. The feature will be added later.
+**Synthetic Environment Server**, which simulates a physical environment for Mixed Reality app development, is not current supported on macOS and will be enabled through a future release.
