@@ -105,3 +105,5 @@ Please check the Meta XR Simulator [documentation](https://developer.oculus.com/
 **Intel-based Mac** is not currently supported.
 
 **Vulkan** is the only supported graphics API at this moment. **Metal** support will be added in the near future.
+
+**Data Forwarding** If you connected your Quest headset but the device dropdown list is empty, it's likely because XR Simulator doesn't know where to find `adb`. You could either append your platform-tools path to PATH environment, or modify `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/config/sim_core_configuration.json` to set `adb_path`.
