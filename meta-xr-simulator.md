@@ -24,12 +24,18 @@ While not essential, it's recommended to use the **Meta Quest Developer Hub** in
 
 ### Install Meta XR Simulator
 
-Run the following commands to install Meta XR Simulator
+Run the following commands to install Meta XR Simulator:
+
+```bash
+brew tap Oculus-VR/tap
+brew install meta-xr-simulator
+```
+
+If Meta XR Simulator is already installed, you may run the following commands to upgrade:
 
 ```bash
 brew update
-brew tap Oculus-VR/tap
-brew install meta-xr-simulator
+brew upgrade meta-xr-simulator
 ```
 
 Disable quarantine of `SIMULATOR.so`, so it can be loaded by another OpenXR app:
@@ -45,7 +51,7 @@ sudo mkdir -p /usr/local/share/openxr/1
 sudo ln -s /opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
 ```
 
-However, it's not necessary. You can also set `XR_RUNTIME_JSON` environment variable before running your OpenXR app. It can be used in absence of, or override the OpenXR runtime set through `active_runtime.json`:
+However, setting activate OpenXR Runtime under `/usr/local` is not the only way. You can also set `XR_RUNTIME_JSON` environment variable before running your OpenXR app. It can be used in absence of, or override the OpenXR runtime set through `active_runtime.json`:
 
 ```bash
 # Add this line to ~/.zshrc or run it before launch an OpenXR app
