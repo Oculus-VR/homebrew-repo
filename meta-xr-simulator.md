@@ -13,10 +13,10 @@ Open the downloaded *vulkansdk-macos-v.w.xx.0.dmg*, double click “InstallVulka
 ### Homebrew
 Install Homebrew following the instruction on https://brew.sh/ 
 
-### Cmake
+### CMake
 Run `brew install cmake` from Terminal
 
-### (Optional) adb
+### (Optional) Android Device Bridge (adb)
 To use **Data Forwarding** (which enables you to use the physical Quest Touch Controller with XR Simulator), you need to have `adb` in your `PATH` environment variable. `adb` is a part of Android SDK Platform Tools and can be installed with **Android Studio** from its [official website](https://developer.android.com/studio).
 
 ### (Optional) Meta Quest Developer Hub
