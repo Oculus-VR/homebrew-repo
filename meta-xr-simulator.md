@@ -1,5 +1,7 @@
 # Develop OpenXR apps on macOS with Meta XR Simulator
 
+> **WARNING**: The macOS support of Meta XR Simulator is currently in developer preview. Both the functionality and distribution solution may be subject to changes before production.
+
 ## Prerequisites
 
 ### Vulkan SDK 
