@@ -74,12 +74,12 @@ cmake -G "Xcode" ../..
 
 Please check [BUILD.cs](https://github.com/KhronosGroup/OpenXR-SDK-Source/blob/main/BUILDING.md) of OpenXR SDK for further details.
 
-> Note: please verify if Vulkan SDK is correctly detected when running `cmake`. You should see the following lines in the output:
+**Please verify if Vulkan SDK is correctly detected when running `cmake`. You should see the following lines in the output:**
 ```
 -- Found Vulkan: /usr/local/lib/libvulkan.dylib (found version "1.3.275") found components: glslc glslangValidator
 -- Enabling Vulkan support
 ```
-> However, if you see `-- Could NOT find Vulkan (missing: Vulkan_LIBRARY Vulkan_INCLUDE_DIR) (found version "")` in the output, please fix your Vulkan installation before proceed.
+However, if you see `-- Could NOT find Vulkan (missing: Vulkan_LIBRARY Vulkan_INCLUDE_DIR) (found version "")` in the output, please fix your Vulkan installation before proceed.
 
 ### Build and run hello_xr
 
