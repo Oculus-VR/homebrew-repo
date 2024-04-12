@@ -40,25 +40,38 @@ brew update
 brew upgrade meta-xr-simulator
 ```
 
-Disable quarantine of `SIMULATOR.so`, so it can be loaded by another OpenXR app:
+After install/upgrade Meta XR Simulator, run the following command to complete the initial setup (as prompted in Homebrew output):
 
 ```bash
-sudo xattr -d com.apple.quarantine /opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/SIMULATOR.so
+sudo /opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/post_installation_macos.sh
 ```
 
-It's recommended to set Meta XR Simulator as the active OpenXR Runtime for the system:
+The script will remove the quarantine protection from Meta XR Simulator binaries, and create/modify the symbol link `/usr/local/share/openxr/1/active_runtime.json` to set Meta XR Simulator as the default OpenXR runtime to the system. 
 
-```bash
-sudo mkdir -p /usr/local/share/openxr/1
-sudo ln -s /opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
+Note: If you want to switch between multiple OpenXR runtimes, on top of modifying the global symbol link, you can also set `XR_RUNTIME_JSON` environment variable before running your OpenXR app. It can be used in absence of, or override the OpenXR runtime set through `active_runtime.json`.
+
+### Use Meta XR Simulator
+
+With Meta XR Simulator be setup as the active OpenXR runtime, it will automatically be launched when you are running an OpenXR app. Specifically, you will see its debug window be opened when `xrCreateSession()` is called.
+
+You can either use a game engine that supports OpenXR on Mac, or follow the subsequent sections to build a native C++ app using the OpenXR SDK.
+
+### Run Synthetic Environment Server
+
+Synthetic Environment Server simulates the physical environment for mixed reality OpenXR apps. By launching it before Meta XR Simulator starts, the mixed reality app can access passthrough, anchor, scene data through the corresponding OpenXR extensions.
+
+To launch synthetic environment server, use one of the scripts under `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/synth_env_server`. 
+
+For example, if you want to use the synthetic living room, run
+```
+/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/synth_env_server/LaunchLivingRoom.sh
 ```
 
-However, setting activate OpenXR Runtime under `/usr/local` is not the only way. You can also set `XR_RUNTIME_JSON` environment variable before running your OpenXR app. It can be used in absence of, or override the OpenXR runtime set through `active_runtime.json`:
+You should not launch more than one synthetic environment server at the same time. All Meta XR Simulator instances will share the same synthetic environment, to simulate a co-location multiplayer experience.
 
-```bash
-# Add this line to ~/.zshrc or run it before launch an OpenXR app
-export XR_RUNTIME_JSON=/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json
-```
+### Data Forwarding
+
+to be added
 
 ### Download OpenXR-SDK-Source
 
@@ -100,10 +113,7 @@ Please check the Meta XR Simulator [documentation](https://developer.oculus.com/
 
 ## Known issues
 
-**Synthetic Environment Server**, which simulates a physical environment for Mixed Reality app development, is not current supported on macOS and will be enabled in the near future.
+The performance of **Synthetic Environment Server** is slower on macOS compared with its Windows build. It's an known issue and will be improved.
 
 **Intel-based Mac** is not currently supported.
 
-**Vulkan** is the only supported graphics API at this moment. **Metal** support will be added in the near future.
-
-**Data Forwarding** If you connected your Quest headset but the device dropdown list is empty, it's likely because XR Simulator doesn't know where to find `adb`. You could either append your platform-tools path to `PATH` environment variable (e.g. in Xcode Scheme), or modify `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/config/sim_core_configuration.json` to set `adb_path`.
