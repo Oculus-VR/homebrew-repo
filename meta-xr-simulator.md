@@ -48,7 +48,7 @@ sudo /opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/post_installation_macos.
 
 The script will remove the quarantine protection from Meta XR Simulator binaries, and create/modify the symbol link `/usr/local/share/openxr/1/active_runtime.json` to set Meta XR Simulator as the default OpenXR runtime to the system. 
 
-Note: If you want to switch between multiple OpenXR runtimes, on top of modifying the global symbol link, you can also set `XR_RUNTIME_JSON` environment variable before running your OpenXR app. It can be used in absence of, or override the OpenXR runtime set through `active_runtime.json`.
+> Note: If you want to switch between multiple OpenXR runtimes, on top of modifying the global symbol link, you can also set `XR_RUNTIME_JSON` environment variable before running your OpenXR app. It can be used in absence of, or override the OpenXR runtime set through `active_runtime.json`.
 
 ### Use Meta XR Simulator
 
