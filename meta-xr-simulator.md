@@ -56,9 +56,9 @@ With Meta XR Simulator be setup as the active OpenXR runtime, it will automatica
 
 You can either use a game engine that supports OpenXR on Mac, or follow the subsequent sections to build a native C++ app using the OpenXR SDK.
 
-### Run Synthetic Environment Server
+### Synthetic Environment Server
 
-Synthetic Environment Server simulates the physical environment for mixed reality OpenXR apps. By launching it before Meta XR Simulator starts, the mixed reality app can access passthrough, anchor, scene data through the corresponding OpenXR extensions.
+Synthetic Environment Server simulates the physical environment for mixed reality OpenXR apps. By launching it before Meta XR Simulator starts, the mixed reality app can access passthrough, anchor, or scene data through the corresponding OpenXR extensions.
 
 To launch synthetic environment server, use one of the scripts under `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/synth_env_server`. 
 
