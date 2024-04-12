@@ -13,8 +13,8 @@ Open the downloaded *vulkansdk-macos-v.w.xx.0.dmg*, double click “InstallVulka
 ### Homebrew
 Install Homebrew following the instruction on https://brew.sh/ 
 
-### CMake
-Run `brew install cmake` from Terminal
+### (Optional) CMake
+You would need CMake for building apps using OpenXR SDK. To install CMake, run `brew install cmake` from Terminal.
 
 ### (Optional) Android Device Bridge (adb)
 To use **Data Forwarding** (which enables you to use the physical Quest Touch Controller with XR Simulator), you need to have `adb` in your `PATH` environment variable. `adb` is a part of Android SDK Platform Tools and can be installed with **Android Studio** from its [official website](https://developer.android.com/studio).
@@ -60,18 +60,27 @@ You can either use a game engine that supports OpenXR on Mac, or follow the subs
 
 Synthetic Environment Server simulates the physical environment for mixed reality OpenXR apps. By launching it before Meta XR Simulator starts, the mixed reality app can access passthrough, anchor, or scene data through the corresponding OpenXR extensions.
 
-To launch synthetic environment server, use one of the scripts under `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/synth_env_server`. 
+To launch Synthetic Environment Server, use one of the scripts under `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/synth_env_server`. 
 
-For example, if you want to use the synthetic living room, run
+For example, if you want to use a simulated living room, run
 ```
 /opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/synth_env_server/LaunchLivingRoom.sh
 ```
 
-You should not launch more than one synthetic environment server at the same time. All Meta XR Simulator instances will share the same synthetic environment, to simulate a co-location multiplayer experience.
+You should not launch more than one Synthetic Environment Server at the same time. All Meta XR Simulator instances will share the same synthetic environment, to simulate a co-location multiplayer experience.
 
 ### Data Forwarding
 
-to be added
+Data Forwarding lets you control the Meta XR Simulator with real Meta Quest controllers by connecting a Quest headset to your computer without wearing it. With this feature, you will find it easier to provide complex input to your application running in the simulator.
+
+To install Data Forwarding Server to your Quest, run
+```
+adb install /opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/data_forwarding_server/XrSimDataForwardingServer.apk
+```
+
+Check our [documentation page](https://developer.oculus.com/documentation/unity/xrsim-data-forwarding) for more details.
+
+## Create OpenXR app using OpenXR SDK
 
 ### Download OpenXR-SDK-Source
 
