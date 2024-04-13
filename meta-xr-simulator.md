@@ -1,6 +1,8 @@
 # Develop OpenXR apps on macOS with Meta XR Simulator
 
 > **WARNING**: The macOS support of Meta XR Simulator is currently in early developer preview. Both the functionality and distribution solution may be subject to changes before production.
+>
+> **Apple Silicon Mac** is required. Intel-based Mac is not currently supported.
 
 ## Prerequisites
 
@@ -71,6 +73,8 @@ For example, if you want to use a simulated living room, run
 
 You should not launch more than one Synthetic Environment Server at the same time. All Meta XR Simulator instances will share the same synthetic environment, to simulate a co-location multiplayer experience.
 
+> **WARNING**: The performance of Synthetic Environment Server is much slower on macOS compared to its Windows build. It's an known issue and will be optimized later.
+
 ### Data Forwarding
 
 Data Forwarding lets you control the Meta XR Simulator with real Meta Quest controllers by connecting a Quest headset to your computer without wearing it. With this feature, you will find it easier to provide complex input to your application running in the simulator.
@@ -121,10 +125,3 @@ Open the Targets dropdown again, click "Edit Scheme …"
 ## More information
 
 Please check the Meta XR Simulator [documentation](https://developer.oculus.com/documentation/native/xrsim-intro/) to obtain further information.
-
-## Known issues
-
-The performance of **Synthetic Environment Server** is slower on macOS compared with its Windows build. It's an known issue and will be improved.
-
-**Intel-based Mac** is not currently supported.
-
