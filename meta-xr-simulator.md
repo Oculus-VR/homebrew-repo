@@ -125,3 +125,7 @@ Open the Targets dropdown again, click "Edit Scheme …"
 ## More information
 
 Please check the Meta XR Simulator [documentation](https://developer.oculus.com/documentation/native/xrsim-intro/) to obtain further information.
+
+## Known issues
+
+* Meta XR Simulator may crash when exiting app using mixed reality features but Synthetic Environment Server wasn't started
