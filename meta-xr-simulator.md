@@ -2,7 +2,7 @@
 
 Current build: *v66.0.0-beta.3*
 
-> **WARNING**: The macOS support of Meta XR Simulator is currently in developer preview. Both the functionality and distribution solution may be subject to changes before production.
+> **WARNING**: The macOS support of Meta XR Simulator is currently in developer preview. Both the functionality and distribution solution may be subject to changes before production. For feedback and suggestion, please send email to xrsim-mac-feedback@meta.com.
 >
 > **Apple Silicon Mac** is required. Intel-based Mac is not currently supported.
 > 
