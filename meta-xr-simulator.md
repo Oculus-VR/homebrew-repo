@@ -6,7 +6,7 @@ Current build: *v66.0.0-beta.3*
 >
 > **Apple Silicon Mac** is required. Intel-based Mac is not currently supported.
 > 
-> Support for **Unity** using the **OpenXR Plugin** and **Meta XR SDK** is coming soon. Stay tuned!
+> Support for **Unity** using the **OpenXR Plugin** and **Meta XR SDK** is under development. Stay tuned!
 
 ## Prerequisites
 
