@@ -135,7 +135,7 @@ Here shows are setup steps to enable OpenXR to a Unity Project:
 4. In **Project Settings** / **XR Plug-in Management**, check **OpenXR** in the first (Standalone) and last (Android) panels.
 5. Go to the first panel of **XR Plugin-in Management** Settings, click the "Warning" sign besides OpenXR, and click the "Fix All" button.
 6. Click "Edit" button of the "at least one interaction profile must be added" message, it brings you to the **OpenXR Settings**, add "Oculus Touch Controller Profile" to "Enabled Interaction Profiles".
-    * If you haven't set Meta XR Simulator as the active OpenXR Runtime of the system (which is recommended), you can also set **Play Mode OpenXR Runtime** to `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json` in this panel.
+    * (Optional) If you haven't set Meta XR Simulator as the active OpenXR Runtime of the system, you can also set **Play Mode OpenXR Runtime** to `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json` in this panel.
 7. Click **Play** button of the Unity editor. It will launch Meta XR Simulator and open its Debug Window if everything is setup correctly.
 
 You may then install the [Meta XR All-in-one SDK](https://assetstore.unity.com/packages/tools/integration/meta-xr-all-in-one-sdk-269657) (v66 or above), or [Unity XR Interaction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html), to develop your OpenXR app using Unity.
