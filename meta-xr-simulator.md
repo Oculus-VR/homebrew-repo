@@ -146,6 +146,6 @@ Please check the Meta XR Simulator [documentation](https://developer.oculus.com/
 
 ## Known issues
 
-* The performance of **Synthetic Environment Server** is much slower on macOS compared to its Windows build. It's an known issue and will be optimized later.
+* The performance of **Synthetic Environment Server** is slower on macOS compared to Windows. It's an known issue and will be optimized later.
 * **Vulkan** is the only graphics API supported on Mac currently. **Metal** graphics API will be enabled through a future Khronos OpenXR update.
-* Unity **Oculus XR Plugin** doesn't support using an OpenXR runtime on Mac. If you are developing an Quest app, you may use "Oculus XR Plugin" on Android and "OpenXR Plugin" on Standalone. Meta XR SDK is compatible with both XR Plugins.
+* Unity **Oculus XR Plugin** doesn't support OpenXR runtime on Mac. If you are developing a Meta Quest app, you may use **Oculus XR Plugin** on Android and **OpenXR Plugin** on Standalone. **Meta XR Core SDK (v66+)** is compatible with both XR Plugins using Mac.
