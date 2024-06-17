@@ -124,17 +124,17 @@ Open the Targets dropdown again, click "Edit Scheme …"
 
 ## Develop OpenXR app using Unity
 
-You need a recent Unity editor build (e.g. latest 2022.3 LTS) for Apple Silicon and **OpenXR Plugin** to use Meta XR Simulator on Mac.
+You need a recent Unity editor build (e.g. latest 2022.3 LTS) for Apple Silicon and _OpenXR Plugin_ to use Meta XR Simulator on Mac.
 
 Here shows are setup steps to enable OpenXR to a Unity Project:
 
 0. Refer to the instruction above to install **Vulkan SDK** and **Meta XR Simulator**
 1. In Unity Package Manager, install **XR Plugin Management** from Unity Registry.
-2. Before macOS is supported in a future **OpenXR Plugin** production release, you need to install an expermental version of that. Click "+" and choose "Add package by name". Input **com.unity.xr.openxr** as the name and **1.11.1-exp.1** as the version, and click "Add" button.
-3. After the installation of **OpenXR Plugin**, restart Unity editor when prompted for enabling the new Input System.
-4. In **Project Settings** / **XR Plug-in Management**, check **OpenXR** in the first (Standalone) and last (Android) panels.
-5. Go to the first panel of **XR Plugin-in Management** Settings, click the "Warning" sign besides OpenXR, and click the "Fix All" button.
-6. Click "Edit" button of the "at least one interaction profile must be added" message, it brings you to the **OpenXR Settings**, add "Oculus Touch Controller Profile" to "Enabled Interaction Profiles".
+2. Before the OpenXR Loader is included in a future **OpenXR Plugin** production release on macOS, you need to install an experimental version of the plugin. Click "+" and choose "Add package by name". Input **com.unity.xr.openxr** as the name and **1.11.1-exp.1** as the version, and click "Add" button.
+3. After the installation of **OpenXR Plugin**, restart Unity editor, if prompted for enabling the new Input System.
+4. In **Project Settings** / **XR Plug-in Management**, check **OpenXR** in the first tab (the standalone platforms) and the third tab (the Android platform).
+5. Go to the first tab of **XR Plugin-in Management** Settings, click the "Warning" sign besides OpenXR, and click the "Fix All" button.
+6. Click "Edit" button of the "at least one interaction profile must be added" message, it brings you to the **OpenXR Settings** panel, add *Oculus Touch Controller Profile* to *Enabled Interaction Profiles* list.
     * (Optional) If you haven't set Meta XR Simulator as the active OpenXR Runtime of the system, you can also set **Play Mode OpenXR Runtime** to `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json` in this panel.
 7. Click **Play** button of the Unity editor. It will launch Meta XR Simulator and open its Debug Window if everything is setup correctly.
 
