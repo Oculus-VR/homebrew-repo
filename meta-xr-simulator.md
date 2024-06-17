@@ -124,9 +124,9 @@ Open the Targets dropdown again, click "Edit Scheme …"
 
 ## Develop OpenXR app using Unity
 
-You need a recent Unity editor build (e.g. latest 2022.3 LTS) for Apple Silicon and _OpenXR Plugin_ to use Meta XR Simulator on Mac.
+You need a recent Unity editor build (e.g. latest 2022.3 LTS) for Apple Silicon and _OpenXR Plugin_ to use Meta XR Simulator on macOS.
 
-Here shows are setup steps to enable OpenXR to a Unity Project:
+Here are the steps to enable OpenXR in a new Unity Project on macOS:
 
 0. Refer to the instruction above to install **Vulkan SDK** and **Meta XR Simulator**
 1. In Unity Package Manager, install **XR Plugin Management** from Unity Registry.
