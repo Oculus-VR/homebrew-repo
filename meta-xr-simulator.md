@@ -132,7 +132,7 @@ Here are the steps to enable OpenXR in a new Unity Project on macOS:
 1. In Unity Package Manager, install **XR Plugin Management** from Unity Registry.
 2. Install an experimental version of Unity's **OpenXR Plugin**. Click "+" and choose "Add package by name". Input **com.unity.xr.openxr** as the name and **1.11.1-exp.1** as the version, and click "Add" button.
 3. After the installation of **OpenXR Plugin**, restart Unity editor, if prompted for enabling the new Input System.
-4. In **Project Settings** / **XR Plug-in Management**, check **OpenXR** in the first tab (the standalone platforms) and the third tab (the Android platform).
+4. In **Project Settings** / **XR Plug-in Management**, check **OpenXR** in the first tab (the standalone platforms).
 5. Go to the first tab of **XR Plugin-in Management** Settings, click the "Warning" sign besides OpenXR, and click the "Fix All" button.
 6. Click "Edit" button of the "at least one interaction profile must be added" message, it brings you to the **OpenXR Settings** panel, add *Oculus Touch Controller Profile* to *Enabled Interaction Profiles* list.
     * (Optional) If you haven't set Meta XR Simulator as the active OpenXR Runtime of the system, you can also set **Play Mode OpenXR Runtime** to `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json` in this panel.
