@@ -24,7 +24,7 @@ You would need CMake for building apps using OpenXR SDK. To install CMake, run `
 To use **Data Forwarding** (which enables you to use the physical Quest Touch Controller with XR Simulator), you need to have `adb` in your `PATH` environment variable. `adb` is a part of Android SDK Platform Tools and can be installed with **Android Studio** from its [official website](https://developer.android.com/studio).
 
 ### (Optional) Meta Quest Developer Hub
-While not essential, it's recommended to use the **Meta Quest Developer Hub** in conjunction with XR Simulator to manage your Quest headset when using **Data Forwarding**. It allows you to disable the Proximity Sensor and launch the Data Forwarding Server with just a few clicks. You can install it from the [official website](https://developer.oculus.com/meta-quest-developer-hub/).
+It's highly recommended to use the **Meta Quest Developer Hub** in conjunction with XR Simulator to manage your Quest headset when using **Data Forwarding**. It allows you to disable the Proximity Sensor and launch the Data Forwarding Server with just a few clicks. You can install it from the [official website](https://developer.oculus.com/meta-quest-developer-hub/).
 
 ## Install and Use Meta XR Simulator on macOS
 
