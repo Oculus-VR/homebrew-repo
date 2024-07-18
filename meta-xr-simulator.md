@@ -1,6 +1,6 @@
 # Develop OpenXR apps on macOS with Meta XR Simulator
 
-Current version: *66.0.0*
+Current version: *67.0.0*
 
 > **WARNING**: The macOS support of Meta XR Simulator is currently in developer preview. Both the functionality and distribution solution may be subject to changes before production. For feedback and suggestion, please send email to xrsim-mac-feedback@meta.com.
 >
