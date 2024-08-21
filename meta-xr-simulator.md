@@ -149,7 +149,7 @@ Here are the brief steps:
 
 0. Refer to the instruction above to install [Vulkan SDK](#vulkan-sdk) and [Meta XR Simulator](#install-and-use-meta-xr-simulator-on-macos)
 1. Follow the [Setting up XR](https://docs.godotengine.org/en/stable/tutorials/xr/setting_up_xr.html) page to configure your project. Make sure that OpenXR is enabled, and the XR initialization script is added to the root note of the XR scene.
-2. Use the Playtest buttons to test the scene. It will launch Meta XR Simulator and open its Debug Window if everything is setup correctly.
+2. Use the [playtest buttons](https://docs.godotengine.org/en/stable/getting_started/introduction/first_look_at_the_editor.html#first-look-at-godot-s-editor) to test the scene. It will launch Meta XR Simulator and open its Debug Window if everything is setup correctly.
 
 
 ## More information
