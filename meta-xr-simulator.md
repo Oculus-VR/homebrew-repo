@@ -1,6 +1,6 @@
 # Develop OpenXR apps on macOS with Meta XR Simulator
 
-Current version: *67.0.0*
+Current version: *68.0.0*
 
 > **WARNING**: The macOS support of Meta XR Simulator is currently in developer preview. Both the functionality and distribution solution may be subject to changes before production. For feedback and suggestion, please send email to xrsim-mac-feedback@meta.com.
 >
@@ -128,7 +128,7 @@ You need a recent Unity editor build (e.g. latest 2022.3 LTS) for Apple Silicon 
 
 Here are the steps to enable OpenXR in a new Unity Project on macOS:
 
-0. Refer to the instruction above to install **Vulkan SDK** and **Meta XR Simulator**
+0. Refer to the instruction above to install [Vulkan SDK](#vulkan-sdk) and [Meta XR Simulator](#install-and-use-meta-xr-simulator-on-macos)
 1. In Unity Package Manager, install **XR Plugin Management** from Unity Registry.
 2. Install an experimental version of Unity's **OpenXR Plugin**. Click "+" and choose "Add package by name". Input **com.unity.xr.openxr** as the name and **1.11.1-exp.1** as the version, and click "Add" button.
 3. After the installation of **OpenXR Plugin**, restart Unity editor, if prompted for enabling the new Input System.
@@ -139,6 +139,17 @@ Here are the steps to enable OpenXR in a new Unity Project on macOS:
 7. Click **Play** button of the Unity editor. It will launch Meta XR Simulator and open its Debug Window if everything is setup correctly.
 
 You may then install the [Meta XR All-in-one SDK](https://assetstore.unity.com/packages/tools/integration/meta-xr-all-in-one-sdk-269657) (v66 or above), or [Unity XR Interaction Toolkit](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html), to develop your OpenXR app using Unity.
+
+## Develop OpenXR app using Godot
+
+You can use Godot 4.3 or a later release develop OpenXR apps with Meta XR Simulator on an Apple Silicon Mac.
+
+Here are the brief steps:
+
+0. Refer to the instruction above to install [Vulkan SDK](#vulkan-sdk) and [Meta XR Simulator](#install-and-use-meta-xr-simulator-on-macos)
+1. Follow the [Setting up XR](https://docs.godotengine.org/en/stable/tutorials/xr/setting_up_xr.html) page to configure your project. Make sure that OpenXR is enabled, and the XR initialization script is added to the root note of the XR scene.
+2. Use the Playtest buttons to test the scene. It will launch Meta XR Simulator and open its Debug Window if everything is setup correctly.
+
 
 ## More information
 
