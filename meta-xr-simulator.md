@@ -142,7 +142,7 @@ You may then install the [Meta XR All-in-one SDK](https://assetstore.unity.com/p
 
 ## Develop OpenXR app using Godot
 
-You can use Godot 4.3 or a later release develop OpenXR apps with Meta XR Simulator on an Apple Silicon Mac.
+You can use Godot 4.3 or a later release to develop OpenXR apps with Meta XR Simulator on an Apple Silicon Mac.
 
 Here are the brief steps:
 
