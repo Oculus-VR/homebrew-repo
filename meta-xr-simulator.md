@@ -117,7 +117,7 @@ Following the steps to build and launch **hello_xr** from Xcode:
 * Open build/macos/OPENXR.xcodeproj in Xcode
 * In the Targets dropdown, choose **hello_xr**
 Open the Targets dropdown again, click "Edit Scheme …"
-* Set **-g vulkan2** in “Arguments Passed on Launch”
+* Set **-g vulkan2** or **-g metal** in “Arguments Passed on Launch”, according to the Graphics API you want to use.
 * If the active OpenXR runtime hasn’t been set, set `XR_RUNTIME_JSON` to `/opt/homebrew/Cellar/meta-xr-simulator/__VERSION__/meta_openxr_simulator.json` in “Environment Variables”
 * Click **Play** button
 > Note: Although both `XR_KHR_vulkan_enable` and `XR_KHR_vulkan_enable2` are supported by Meta XR Simualtor, The former is not compatible with MoltenVK. Thus, you may get `ERROR_INCOMPATIBLE_DRIVER` if setting the graphics plugin to "vulkan", instead of "vulkan2".
@@ -158,6 +158,5 @@ Please check the Meta XR Simulator [documentation](https://developer.oculus.com/
 ## Known issues
 
 * The performance of **Synthetic Environment Server** is slower on macOS compared to Windows. It's an known issue and will be optimized later.
-* **Vulkan** is the only graphics API supported on Mac currently. **Metal** graphics API will be supported through a future Khronos OpenXR specification update.
 * Unity **Oculus XR Plugin** doesn't support OpenXR runtime on Mac. If you are developing a Meta Quest app, you may use **Oculus XR Plugin** on Android and **OpenXR Plugin** on Standalone. **Meta XR Core SDK (v66+)** is compatible with both XR Plugins using Mac.
 * Unity does NOT officially support the macOS OpenXR Loader in the **OpenXR Plugin**. And the first version that includes the macOS support is 1.13.0. If the Meta XR Simulator window did not open when you play your project in Unity editor, please double check if the correct version of OpenXR Plugin is installed and activated for OpenXR.
