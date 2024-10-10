@@ -1,6 +1,6 @@
 # Develop OpenXR apps on macOS with Meta XR Simulator
 
-Current version: *68.0.0*
+Current version: *69.0.0*
 
 > **WARNING**: The macOS support of Meta XR Simulator is currently in developer preview. Both the functionality and distribution solution may be subject to changes before production. For feedback and suggestion, please send email to xrsim-mac-feedback@meta.com.
 >
@@ -130,8 +130,7 @@ Here are the steps to enable OpenXR in a new Unity Project on macOS:
 
 0. Refer to the instruction above to install [Vulkan SDK](#vulkan-sdk) and [Meta XR Simulator](#install-and-use-meta-xr-simulator-on-macos)
 1. In Unity Package Manager, install **XR Plugin Management** from Unity Registry.
-2. Install an experimental version of Unity's **OpenXR Plugin**. Click "+" and choose "Add package by name". Input **com.unity.xr.openxr** as the name and **1.11.1-exp.1** as the version, and click "Add" button.
-   * *Important: For now, please make sure to install the exact experimental OpenXR Plugin version, which includes the OpenXR Loader on Mac to enable the loading of an OpenXR runtime.*
+2. Install the latest version of Unity's **OpenXR Plugin**. The current version is 1.13.0 which supports macOS.
 3. After the installation of **OpenXR Plugin**, restart Unity editor, if prompted for enabling the new Input System.
 4. In **Project Settings** / **XR Plug-in Management**, check **OpenXR** in the first tab (the standalone platforms).
 5. Go to the first tab of **XR Plugin-in Management** Settings, click the "Warning" sign besides OpenXR, and click the "Fix All" button.
@@ -161,4 +160,4 @@ Please check the Meta XR Simulator [documentation](https://developer.oculus.com/
 * The performance of **Synthetic Environment Server** is slower on macOS compared to Windows. It's an known issue and will be optimized later.
 * **Vulkan** is the only graphics API supported on Mac currently. **Metal** graphics API will be supported through a future Khronos OpenXR specification update.
 * Unity **Oculus XR Plugin** doesn't support OpenXR runtime on Mac. If you are developing a Meta Quest app, you may use **Oculus XR Plugin** on Android and **OpenXR Plugin** on Standalone. **Meta XR Core SDK (v66+)** is compatible with both XR Plugins using Mac.
-* Unity does NOT officially support the macOS OpenXR Loader in the **OpenXR Plugin**.
+* Unity does NOT officially support the macOS OpenXR Loader in the **OpenXR Plugin**. And the first version that includes the macOS support is 1.13.0. If the Meta XR Simulator window did not open when you play your project in Unity editor, please double check if the correct version of OpenXR Plugin is installed and activated for OpenXR.
