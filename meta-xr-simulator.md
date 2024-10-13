@@ -131,6 +131,7 @@ Here are the steps to enable OpenXR in a new Unity Project on macOS:
 0. Refer to the instruction above to install [Vulkan SDK](#vulkan-sdk) and [Meta XR Simulator](#install-and-use-meta-xr-simulator-on-macos)
 1. In Unity Package Manager, install **XR Plugin Management** from Unity Registry.
 2. Install the latest version of Unity's **OpenXR Plugin**. The current version is 1.13.0 which supports macOS.
+    * If you do not see this version in the version history, you can use "Add package by name" and manually add "com.unity.xr.openxr" and "1.13.0".
 3. After the installation of **OpenXR Plugin**, restart Unity editor, if prompted for enabling the new Input System.
 4. In **Project Settings** / **XR Plug-in Management**, check **OpenXR** in the first tab (the standalone platforms).
 5. Go to the first tab of **XR Plugin-in Management** Settings, click the "Warning" sign besides OpenXR, and click the "Fix All" button.
