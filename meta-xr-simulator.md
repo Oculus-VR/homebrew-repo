@@ -1,6 +1,6 @@
 # Develop OpenXR apps on macOS with Meta XR Simulator
 
-Current version: *69.0.0*
+Current version: *71.0.0*
 
 > **WARNING**: The macOS support of Meta XR Simulator is currently in developer preview. Both the functionality and distribution solution may be subject to changes before production. For feedback and suggestion, please send email to xrsim-mac-feedback@meta.com.
 >
@@ -8,14 +8,17 @@ Current version: *69.0.0*
 
 ## Prerequisites
 
-### Vulkan SDK 
+### Homebrew
+Install Homebrew following the instruction on https://brew.sh/ 
+
+### (Optional) Vulkan SDK
+
+> NOTE: Vulkan SDK is required by Meta XR Simulator until v69. If you are using Meta XR Simulator v71 or above, you could skip this step unless your application uses it.
+
 Following the [official instruction](https://vulkan.lunarg.com/doc/sdk/latest/mac/getting_started.html) to install Vulkan SDK:
 * Download the Vulkan SDK from the Download Site
 Open the downloaded *vulkansdk-macos-v.w.xx.0.dmg*, double click “InstallVulkan” to launch the installer
 * During installation, enable **System Global Installation** option, which updates Vulkan Loader and MoltenVK libraries in `/usr/local`
-
-### Homebrew
-Install Homebrew following the instruction on https://brew.sh/ 
 
 ### (Optional) CMake
 You would need CMake for building apps using OpenXR SDK. To install CMake, run `brew install cmake` from Terminal.
